@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#06171d" />
+    <meta name="description" content="Siemens Energy SGT-A05 interactive product concept" />
+    <title>西门子能源模型网站</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"><i></i><b></b></div>
+    <div class="scene-flash" aria-hidden="true"></div>
+    <canvas id="scene" aria-label="SGT-A05 互动式三维燃气轮机"></canvas>
+    <div class="noise"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#hero" aria-label="西门子能源模型网站首页">
+        <span class="study-dot"></span>
+        <span>西门子能源模型网站</span>
+      </a>
+      <div class="model-id">AERODERIVATIVE / 1963—NOW</div>
+      <button class="soundless" id="autoRotate" aria-pressed="true"><span></span>AUTO ORBIT</button>
+    </header>
+
+    <nav class="rail" aria-label="章节导航">
+      <button class="rail-dot active" data-section="0" aria-label="总览"><span>01</span></button>
+      <button class="rail-dot" data-section="1" aria-label="完整解剖"><span>02</span></button>
+      <button class="rail-dot" data-section="2" aria-label="压气机"><span>03</span></button>
+      <button class="rail-dot" data-section="3" aria-label="燃烧系统"><span>04</span></button>
+      <button class="rail-dot" data-section="4" aria-label="性能数据"><span>05</span></button>
+      <button class="rail-dot" data-section="5" aria-label="医院热电联产"><span>06</span></button>
+      <button class="rail-dot" data-section="6" aria-label="应急电源"><span>07</span></button>
+      <button class="rail-dot" data-section="7" aria-label="移动供能"><span>08</span></button>
+      <button class="rail-dot" data-section="8" aria-label="模块维护"><span>09</span></button>
+    </nav>
+
+    <main>
+      <section class="panel hero" id="hero" data-scene="hero">
+        <div class="eyebrow reveal">THE PROVEN AERODERIVATIVE</div>
+        <h1 class="reveal"><span>SGT–</span><strong>A05</strong></h1>
+        <p class="hero-copy reveal">把 1.33 亿小时的可靠经验，压缩进一台可在 60 秒内启动的紧凑型燃气轮机。</p>
+        <div class="hero-actions reveal">
+          <button class="primary" data-jump="1">拆解核心 <i>↘</i></button>
+          <a class="text-link" href="https://www.siemens-energy.com/global/en/home/products-services/product/sgt-a05-ae.html" target="_blank" rel="noreferrer">官方产品页 ↗</a>
+        </div>
+        <div class="hero-stat reveal">
+          <b>1,720<sup>+</sup></b>
+          <span>UNITS SOLD<br />WORLDWIDE</span>
+        </div>
+        <div class="drag-hint"><span class="mouse"></span>拖动旋转 · 滚轮缩放</div>
+      </section>
+
+      <section class="panel core anatomy" id="core" data-scene="core">
+        <div class="section-copy">
+          <div class="eyebrow">02 / COMPLETE ANATOMY</div>
+          <h2>POWER,<br /><em>UNFOLDED.</em></h2>
+          <p>从进气锥到排气扩压段，沿同一根动力轴展开全部核心模块。点击分解结构，观察各级之间的工程关系。</p>
+          <div class="control-row">
+            <button class="chip active" id="cutaway" aria-pressed="true"><span></span>剖视模式</button>
+            <button class="chip" id="explode" aria-pressed="false"><span></span>分解结构</button>
+          </div>
+        </div>
+        <div class="callout callout-a"><span></span><b>14,600</b><small>RPM / TURBINE SPEED</small></div>
+        <div class="callout callout-b"><span></span><b>4 MODULES</b><small>ONE COAXIAL POWER CORE</small></div>
+        <div class="core-strip">
+          <div><small>01</small><b>INTAKE</b></div>
+          <div><small>02</small><b>COMPRESSION</b></div>
+          <div class="hot"><small>03</small><b>COMBUSTION</b></div>
+          <div><small>04</small><b>POWER</b></div>
+        </div>
+      </section>
+
+      <section class="panel detail compressor" id="compressor" data-scene="compressor">
+        <div class="detail-copy">
+          <div class="eyebrow">03 / COMPRESSION SYSTEM</div>
+          <h2>PRESSURE<br /><em>IN LAYERS.</em></h2>
+          <p>多级轴流压气机逐级提高空气压力。交错排列的转子与静子叶片将流动稳定地送入燃烧系统。</p>
+        </div>
+        <div class="detail-index">01—13</div>
+        <div class="callout detail-callout"><span></span><b>14.4 : 1</b><small>PRESSURE RATIO / KB7HE</small></div>
+        <div class="flow-legend"><i></i>AIRFLOW DIRECTION <b>→</b></div>
+      </section>
+
+      <section class="panel detail combustion" id="combustion" data-scene="combustion">
+        <div class="detail-copy right-copy">
+          <div class="eyebrow">04 / COMBUSTION SYSTEM</div>
+          <h2>HEAT,<br /><em>CONTROLLED.</em></h2>
+          <p>环形布置的燃烧筒围绕核心轴工作，支持天然气、液体燃料与双燃料配置，并将高能气流导入动力涡轮。</p>
+        </div>
+        <div class="orbital-stat"><b>≤25</b><span>ppmvd NOₓ<br />AT 15% O₂ / DLE</span></div>
+        <div class="fuel-pills"><span>NATURAL GAS</span><span>LIQUID FUEL</span><span>DUAL FUEL</span></div>
+      </section>
+
+      <section class="panel performance" id="performance" data-scene="performance">
+        <div class="performance-copy">
+          <div class="eyebrow">05 / FIELD PROVEN</div>
+          <h2>ENGINEERED<br />TO <em>ENDURE.</em></h2>
+          <p>SGT‑A05 KB7HE · 简单循环发电。为分布式能源、热电联产、移动与应急电源而生。</p>
+        </div>
+        <div class="glass-card">
+          <div class="card-head"><span>LIVE PERFORMANCE</span><i>KB7HE</i></div>
+          <div class="metric"><b data-count="5.8">0.0</b><span>MW(e)<small>POWER OUTPUT</small></span></div>
+          <div class="metric"><b data-count="33.2">0.0</b><span>%<small>GROSS EFFICIENCY</small></span></div>
+          <div class="metric"><b data-count="60">0</b><span>SEC<small>START-UP</small></span></div>
+          <div class="metric"><b data-count="133">0</b><span>M HRS<small>OPERATING EXPERIENCE</small></span></div>
+        </div>
+        <div class="countries"><span>55</span> COUNTRIES <i></i> <span>500+</span> INDUSTRIAL CUSTOMERS</div>
+      </section>
+
+      <section class="panel usecase usecase-chp" id="chp" data-scene="chp">
+        <div class="usecase-copy">
+          <div class="eyebrow">06 / COMBINED HEAT &amp; POWER</div>
+          <h2>POWER<br /><em>+ HEAT.</em></h2>
+          <p>医院与关键公共设施需要持续的电力与热能。Royal Aberdeen Infirmary 的 SGT‑A05 KB7S 同时供应电力和蒸汽。</p>
+        </div>
+        <div class="case-label">REAL-WORLD REFERENCE / SCOTLAND</div>
+        <div class="case-metrics">
+          <div><b>5.5</b><span>MW<br />ELECTRICITY</span></div>
+          <div><b>12</b><span>t/h<br />STEAM</span></div>
+          <div><b>−17%</b><span>CO₂<br />EMISSIONS</span></div>
+        </div>
+        <div class="heat-lines"><i></i><i></i><i></i></div>
+      </section>
+
+      <section class="panel usecase usecase-emergency" id="emergency" data-scene="emergency">
+        <div class="usecase-copy right-copy">
+          <div class="eyebrow">07 / EMERGENCY &amp; STANDBY</div>
+          <h2>READY<br /><em>IN 60.</em></h2>
+          <p>电网失效时，快速启动能力为安全关键设施恢复独立供电。模型进入启动序列，能量流由静止提升至额定状态。</p>
+        </div>
+        <div class="countdown"><span>START-UP</span><b>60</b><small>SECONDS</small></div>
+        <div class="pulse-grid"></div>
+      </section>
+
+      <section class="panel usecase usecase-mobile" id="mobile" data-scene="mobile">
+        <video class="mobile-deployment-video" id="mobileDeploymentVideo" muted playsinline preload="auto" aria-label="移动电站与偏远地区部署场景">
+          <source src="./scenes/mobile-deployment.mp4" type="video/mp4" />
+        </video>
+        <div class="mobile-video-shade" aria-hidden="true"></div>
+        <div class="video-transition-label" aria-hidden="true"><span></span>DEPLOYMENT SCENE <b>→</b> INTERACTIVE CORE</div>
+        <div class="model-handoff" aria-hidden="true"><i></i><b></b></div>
+        <div class="usecase-copy">
+          <div class="eyebrow">08 / MOBILE &amp; DISTRIBUTED POWER</div>
+          <h2>POWER,<br /><em>WHERE NEEDED.</em></h2>
+          <p>紧凑、轻量、模块化的航空衍生结构，适合分布式能源、移动电站及偏远地区部署。</p>
+        </div>
+        <div class="deploy-card">
+          <span>DEPLOYMENT PROFILE</span>
+          <b>4—6 MW</b>
+          <small>50 / 60 Hz · MULTI-FUEL · MODULAR</small>
+        </div>
+        <div class="map-orbits"><i></i><i></i><i></i><b></b></div>
+        <button class="video-sound" id="videoSound" type="button" aria-pressed="false"><span></span> 开启声音</button>
+        <button class="replay-deployment" id="replayDeployment" type="button"><span>↻</span> 重播部署场景</button>
+      </section>
+
+      <section class="panel maintenance" id="maintenance" data-scene="maintenance">
+        <div class="usecase-copy right-copy maintenance-copy">
+          <div class="eyebrow">09 / MODULAR MAINTENANCE</div>
+          <h2>SERVICE,<br /><em>BY MODULE.</em></h2>
+          <p>整机按功能模块依次脱离共同轴线，清楚展示进气、气体发生器、燃烧、动力涡轮与排气模块之间的工程关系。</p>
+        </div>
+        <div class="module-sequence" aria-label="五个维护模块">
+          <div><small>01</small><b>进气增压</b><span>INLET &amp; BOOST</span></div>
+          <div><small>02</small><b>气体发生器</b><span>GAS GENERATOR</span></div>
+          <div><small>03</small><b>燃烧模块</b><span>COMBUSTION</span></div>
+          <div><small>04</small><b>动力涡轮</b><span>POWER TURBINE</span></div>
+          <div><small>05</small><b>排气扩压</b><span>EXHAUST DIFFUSER</span></div>
+        </div>
+        <div class="maintenance-note"><span></span>AXIAL MODULE EXCHANGE / REDUCED DOWNTIME</div>
+      </section>
+
+    </main>
+
+    <footer>
+      <span>CONCEPT EXPERIENCE / NOT AN OFFICIAL PRODUCT CONFIGURATOR</span>
+      <span>DATA: OFFICIAL PRODUCT PAGE · 2026</span>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
